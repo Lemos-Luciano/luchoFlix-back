@@ -8,6 +8,11 @@ const userRoutes = require("./routes/UserRoutes");
 
 const app = express();
 
+app.get ("/", (req, res) => {
+    console.log("peticion recibida")
+    res.status(200).send('<h1>Hola mundo!</h1>')
+})
+
 dbConnect(app);
 
 // Permite todo tipo de conexion cruzada. origin: true = cualquiera se puede conectar a nuestro backend
