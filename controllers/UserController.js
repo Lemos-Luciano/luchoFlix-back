@@ -15,9 +15,10 @@ module.exports.addToLikedMovies = async (req, res) => {
                     },
                     {new : true }
                 );
-            } else return res.json ({ msg: "La película ya fue agregada a la lista con anterioridad"});
+            // } else return res.json ({ msg: "La película ya fue agregada a la lista con anterioridad"});
+            } else return res.json ({ msg: "Repetida"});
         } else await User.create ({email, likedMovies: [data]});
-        return res.json ({msg: "la película fue agregada con exito"});
+        return res.json ({msg: "Agregada"});
     } catch (error) {
         return res.json({msg:"Error agregando pelicula"})
     }
