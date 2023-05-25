@@ -14,7 +14,7 @@ const dbConnect = (app) => {
         })
         .then(() => {
             const PORT = process.env.PORT;
-            console.log("Servidor conectado con MongoDB");
+            console.log("Servidor conectado con MongoDB correctamente");
             // Colocamos dentro el listen ya que debe conectarse con mongoDB primero
             app.listen(PORT,console.log(`Servido levantado en el puerto ${PORT}`));
         })
